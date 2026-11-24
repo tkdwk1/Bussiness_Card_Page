@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 명함 만들기</title>
+
+    <!-- 구글 폰트 연결 (Black Han Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- 머리말 -->
+    <header class="site-header">
+      <h1>나만의 명함 만들기</h1>
+      <p>왼쪽에 입력하면 오른쪽 명함에 바로 반영됩니다.</p>
+    </header>
+
+    <!-- 메인 -->
+    <main class="container">
+      <!-- 왼쪽: 입력 양식 -->
+       <section class="editor">
+        <form action="#">
+          <!-- 기본 정보 세트 -->
+           <fieldset>
+            <legend>기본 정보</legend>
+            <label for="input-name">이름</label>
+            <input type="text" id="input-name" placeholder="예:홍길동">
+
+            <label for="input-dept">학과</label>
+            <select id="input-dept">
+              <option>컴퓨터공학과</option>
+              <option>소프트웨어학과</option>
+              <option>인공지능학과</option>
+              <option>컴퓨터소프트웨어공학과</option>
+              <option>게임콘텐츠학과</option>
+            </select>
+
+            <label for="input-role">희망분야</label>
+            <input type="text" id="input-role" placeholder="예:프론트엔드 개발자">
+           </fieldset>
+
+           <!-- 연락처 세트 -->
+           <fieldset>
+            <legend>연락처</legend>
+            <label for="input-phone">연락처</label>
+            <input type="tel" id="input-phone" placeholder="예:010-1234-5678">
+
+            <label for="input-email">이메일</label>
+            <input type="email" id="input-email" placeholder="예:honggildong@silla.ac.kr">
+           </fieldset>
+
+           <!-- 한줄 소개 세트 -->
+           <fieldset>
+            <legend>한줄 소개</legend>
+            <label for="input-intro">나를 소개하는 문장</label>
+            <textarea id="input-intro" row="3"></textarea>
+           </fieldset>
+        </form>
+       </section>
+       <!-- 오른쪽: 명함 미리보기 -->
+        <section class="preview">
+          <h2>미리보기</h2>
+          
+          <div class="card">
+            <div class="card-top">
+              <p class="card-dept">컴퓨터공학과</p>
+              <p class="card-name">홍길동</p>
+              <p class="card-role">프론트엔드 개발자</p>
+
+            </div>
+            <p class="card-intro">단순하게 살라. 쓸데없는 절차와 일 때문에 얼마나 복잡한 삶을 살아가는가?</p>
+
+            <ul class="card-contact">
+              <li>📞 <span class="card-phone">010-1234-5678</span></li>
+              <li>✉️ <span class="card-email">honggildong@silla.ac.kr</span></li>
+            </ul>
+          </div>
+        </section>
+    </main>
+
+    <!-- 꼬리말 -->
+     <footer class="site-footer">
+      <small>&copy; 2026 컴퓨터공학과 김태환</small>
+     </footer>
+    
+    <script src="js/script.js"></script>
+  </body>
+</html>
